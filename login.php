@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $correo = $_POST['correo'];
     $password = $_POST['password'];
 
-    // AQUÍ VAS A CAMBIAR ESTOS DATOS
+    
     $mi_correo = "24160827@itoaxaca.edu.mx"; 
     $mi_pass = "24160827"; 
 
