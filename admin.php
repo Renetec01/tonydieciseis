@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 // 1. Conexión a la base de datos
-$conexion = mysqli_connect("localhost", "root", "", "tonydieciseis");
+$conexion = mysqli_connect("localhost", "root", "User*2026", "tonydieciseis");
 
 // 2. Verificar conexión
 if (!$conexion) {
