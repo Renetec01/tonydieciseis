@@ -1,5 +1,4 @@
 <?php
-
 // 1. Conexión a la base de datos
 $conexion = mysqli_connect("localhost", "dev_user", "User*2026", "tonydieciseis");
 
@@ -35,13 +34,16 @@ $resultado = mysqli_query($conexion, "SELECT * FROM articulos");
         <tbody>
             <?php while($fila = mysqli_fetch_assoc($resultado)): ?>
             <tr>
-                <td><?php echo $fila['id']; ?></td>
+                <td><?php echo $fila['id_articulo']; ?></td>
                 <td><?php echo $fila['nombre']; ?></td>
                 <td>$<?php echo $fila['precio']; ?></td>
                 <td><?php echo $fila['stock']; ?></td>
                 <td>
-                    <button class="btn btn-warning btn-sm">Editar</button>
-                    <button class="btn btn-danger btn-sm">Eliminar</button>
+                    <!-- Botón de Editar con enlace dinámico -->
+                    <a href="editar.php?id=<?php echo $fila['id_articulo']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                    
+                    <!-- Botón de Eliminar con enlace dinámico y confirmación -->
+                    <a href="eliminar.php?id=<?php echo $fila['id_articulo']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que quieres eliminar este artículo?')">Eliminar</a>
                 </td>
             </tr>
             <?php endwhile; ?>
