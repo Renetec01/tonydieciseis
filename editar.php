@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost", "dev_user", "tso2026", "tonydieciseis");
+include 'conexion.php';
 $id = $_GET['id'];
 
 // Obtener datos actuales del producto

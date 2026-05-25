@@ -1,6 +1,6 @@
 <?php
 // Conexión
-$conexion = mysqli_connect("localhost", "dev_user", "tso2026", "tonydieciseis");
+include 'conexion.php';
 
 // Si el usuario envió el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
