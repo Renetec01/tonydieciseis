@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario'])) {
 }
 
 // 2. Conexión a la base de datos
-$conexion = mysqli_connect("localhost", "dev_user", "User*2026", "tonydieciseis");
+$conexion = mysqli_connect("localhost", "dev_user", "tso2026", "tonydieciseis");
 
 // Verificar conexión
 if (!$conexion) {

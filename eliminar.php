@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost", "dev_user", "User*2026", "tonydieciseis");
+$conexion = mysqli_connect("localhost", "dev_user", "tso2026", "tonydieciseis");
 $id = $_GET['id'];
 
 if (isset($id)) {
