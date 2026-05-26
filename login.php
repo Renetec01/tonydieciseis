@@ -7,8 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Credenciales institucionales del Equipo 16
-    $mi_correo = "24160827@itoaxaca.edu.mx";
-    $mi_pass = "24160827";
+    $mi_correo = "24160785@itoaxaca.edu.mx";
+    $mi_pass = "24160785";
 
     if ($correo === $mi_correo && $password === $mi_pass) {
         // Guardamos el correo en 'usuario' para que admin.php lo reconozca
