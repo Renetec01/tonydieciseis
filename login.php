@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="bg-light d-flex justify-content-center align-items-center vh-100">
 
 <div class="card shadow p-4" style="width: 25rem;">
-    <h3 class="text-center mb-4">Lobby de Acceso</h3>
+    <h3 class="text-center mb-4">Panel admin Rene</h3>
 
     <?php if($error != ""): ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
