@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lista de usuarios permitidos
     $usuarios = [
         "24160827@itoaxaca.edu.mx" => "24160827",
-        "24160785@itoaxaca.edu.mx" => "1234"
+        "24160785@itoaxaca.edu.mx" => "24160785"
     ];
 
     // Verificar si existe el correo y coincide la contraseña
