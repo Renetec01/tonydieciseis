@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario'])) {
 }
 
 // 2. Conexión a la base de datos
-include("conexion.php");
+include 'conexion.php';
 
 // Verificar conexión
 if (!$conexion) {
@@ -57,17 +57,17 @@ $resultado = mysqli_query($conexion, "SELECT * FROM articulos");
         <tbody>
             <?php while($fila = mysqli_fetch_assoc($resultado)): ?>
             <tr>
-                <td><?php echo $fila['id']; ?></td>
+                <td><?php echo $fila['id_articulo']; ?></td>
                 <td><?php echo $fila['nombre']; ?></td>
                 <td>$<?php echo number_format($fila['precio'], 2); ?></td>
                 <td><?php echo $fila['stock']; ?></td>
                 <td>
                     <!-- Botón de Editar -->
-                    <a href="editar.php?id=<?php echo $fila['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="editar.php?id=<?php echo $fila['id_articulo']; ?>" class="btn btn-warning btn-sm">Editar</a>
 
                     <!-- Botón de Eliminar con confirmación real -->
-                    <a href="eliminar.php?id=<?php echo $fila['id']; ?>"
-                       class="btn btn-danger btn-sm"
+                    <a href="eliminar.php?id=<?php echo $fila['id_articulo']; ?>" 
+                       class="btn btn-danger btn-sm" 
                        onclick="return confirm('¿Seguro que quieres borrar este artículo?')">
                        Eliminar
                     </a>

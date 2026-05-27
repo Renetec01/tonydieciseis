@@ -3,18 +3,24 @@ session_start();
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $correo = $_POST['correo'];
     $password = $_POST['password'];
 
-    // Credenciales institucionales del Equipo 16
-    $mi_correo = "24160785@itoaxaca.edu.mx";
-    $mi_pass = "24160785";
+    // Lista de usuarios permitidos
+    $usuarios = [
+        "24160827@itoaxaca.edu.mx" => "24160827",
+        "24160785@itoaxaca.edu.mx" => "24160785"
+    ];
 
-    if ($correo === $mi_correo && $password === $mi_pass) {
-        // Guardamos el correo en 'usuario' para que admin.php lo reconozca
+    // Verificar si existe el correo y coincide la contraseña
+    if (isset($usuarios[$correo]) && $usuarios[$correo] === $password) {
+
         $_SESSION['usuario'] = $correo;
+
         header("Location: admin.php");
         exit();
+
     } else {
         $error = "Correo o contraseña incorrectos.";
     }
@@ -31,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="bg-light d-flex justify-content-center align-items-center vh-100">
 
 <div class="card shadow p-4" style="width: 25rem;">
-    <h3 class="text-center mb-4">Lobby de Acceso</h3>
+    <h3 class="text-center mb-4">Panel admin Rene</h3>
 
     <?php if($error != ""): ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>

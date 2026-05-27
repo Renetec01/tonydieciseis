@@ -1,5 +1,6 @@
 <?php
-include("conexion.php");
+// Conexión
+include 'conexion.php';
 
 // Si el usuario envió el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insertar el nuevo artículo
     $query = "INSERT INTO articulos (nombre, precio, stock) VALUES ('$nombre', '$precio', '$stock')";
-
+    
     if (mysqli_query($conexion, $query)) {
         // Si sale bien, lo regresa a la tabla
         header("Location: admin.php");
