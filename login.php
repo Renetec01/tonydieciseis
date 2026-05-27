@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $correo = $_POST['correo'];
     $password = $_POST['password'];
-
+    //CAMBIO EVIDENTE EN LOGIN
     // Lista de usuarios permitidos
     $usuarios = [
         "24160827@itoaxaca.edu.mx" => "24160827",
