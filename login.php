@@ -8,6 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     //CAMBIO EVIDENTE EN LOGIN
     //PRUEBA 11:17 PM 31/05/2026
+
+    //PRUEBA 10:19 AM 01/06/2026
     // Lista de usuarios permitidos
     $usuarios = [
         "24160827@itoaxaca.edu.mx" => "24160827",
