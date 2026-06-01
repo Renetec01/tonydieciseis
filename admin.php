@@ -34,7 +34,7 @@ $resultado = mysqli_query($conexion, "SELECT * FROM articulos");
 <body class="container mt-5">
 
     <div class="header-flex">
-        <h2>Panel de Administración - Equipo 16</h2>
+        <h2>Panel de Administración Cristian Ramos Salazar- Equipo 16</h2>
         <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
     </div>
 
